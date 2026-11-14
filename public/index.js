@@ -23,7 +23,7 @@ form.addEventListener("submit", async (event) => {
 	frame.style.display = "block";
 
 	// wisp-server-node conventionally exposes its WebSocket endpoint at /wisp/.
-	const wispUrl = "wss://wisp-server-node-63ez.onrender.com/wisp/";
+	const wispUrl = "wss://wisp-server-node-txz7.onrender.com/wisp/";
 	await connection.setTransport("/Ultraviolet-Static/epoxy/index.mjs", [{ wisp: wispUrl }]);
 
 	frame.src = __uv$config.prefix + __uv$config.encodeUrl(url);

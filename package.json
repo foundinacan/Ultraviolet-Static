@@ -10,5 +10,10 @@
   "devDependencies": {
     "eslint": "^8.23.0",
     "prettier": "^2.7.1"
+  },
+  "dependencies": {
+    "@titaniumnetwork-dev/ultraviolet": "3.2.10",
+    "@mercuryworkshop/bare-mux": "2.1.9",
+    "@mercuryworkshop/epoxy-transport": "2.1.28"
   }
 }

@@ -4,7 +4,7 @@ const address = document.getElementById("uv-address");
 const searchEngine = document.getElementById("uv-search-engine");
 const error = document.getElementById("uv-error");
 const errorCode = document.getElementById("uv-error-code");
-const connection = new BareMux.BareMuxConnection("/Ultraviolet-Static/baremux/worker.js");
+const connection = new BareMux.BareMuxConnection("/baremux/worker.js");
 
 form.addEventListener("submit", async (event) => {
 	event.preventDefault();
@@ -22,8 +22,8 @@ form.addEventListener("submit", async (event) => {
 	let frame = document.getElementById("uv-frame");
 	frame.style.display = "block";
 	let wispUrl = "wss://wisp-server-node-63ez.onrender.com/";
-	if (await connection.getTransport() !== "/Ultraviolet-Static/epoxy/index.mjs") {
-		await connection.setTransport("/Ultraviolet-Static/epoxy/index.mjs", [{ wisp: wispUrl }]);
+	if (await connection.getTransport() !== "/epoxy/index.mjs") {
+		await connection.setTransport("/epoxy/index.mjs", [{ wisp: wispUrl }]);
 	}
 	frame.src = __uv$config.prefix + __uv$config.encodeUrl(url);
 });

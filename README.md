@@ -1,26 +1,14 @@
-<p align="center"><img src="https://raw.githubusercontent.com/titaniumnetwork-dev/Ultraviolet-Static/main/public/uv.png" height="200"></p>
+To use this web proxy the free server I am useing will need to be woken up, the following steps should be ran before running the proxy.
 
-<h1 align="center">Ultraviolet-Static</h1>
+First, click the following link,
 
-Static files/assets used to spin up an Ultraviolet website.
+https://wisp-server-node-txz7.onrender.com/
 
-## Install in [Ultraviolet-App](https://github.com/titaniumnetwork-dev/Ultraviolet-App.git)
+This will take you to a websight that will start the server.
 
-See [Ultraviolet-App's Wiki](https://github.com/titaniumnetwork-dev/Ultraviolet-App/wiki/Customizing-your-frontend).
+Next, after the websight before says "Wisp Server Running," click the following link,
 
-## Usage outside of Ultraviolet-App/Static hosting
+https://foundinacan.github.io/Ultraviolet-Static/
 
-### Ultraviolet scripts
-
-This repository doesn't serve any Ultraviolet scripts. It has a `uv.config.js` to show how Ultraviolet is intended to work with this demo. Ultraviolet-App automatically merges our `uv.config.js` with the remaining UV scripts (`uv.sw.js`, `uv.client.js`, etc). **Some work has to be done in order to make this repository standalone.**
-
-Here's how to get the remaining scripts for the purpose of hosting this repository:
-
-1. Go to the [Ultraviolet releases](https://github.com/titaniumnetwork-dev/Ultraviolet/releases/)
-2. Find the latest release
-3. Download the latest tarball (eg. `titaniumnetwork-dev-ultraviolet-x.x.x.tgz`)
-4. Open the tarball, navigate to the `dist` directory, and extract all the scripts with the exception of `uv.config.js` (we already have a configuration) into the `public/uv/` directory in this repository.
-   You may see `.map` files. These are used for debugging. If they're too large, you can omit them without any errors.
-
-   Do not copy `uv.config.js` from the archive!
-
+Google searches do not work, because it is flagged as a bot, a direct link should be pasted into the searchbox.
+If it seems slugish or slow, it is because the server is very limadid, so wait a moment and try again.

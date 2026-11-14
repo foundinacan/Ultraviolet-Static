@@ -19,11 +19,12 @@ form.addEventListener("submit", async (event) => {
 
 	const url = search(address.value, searchEngine.value);
 
-	let frame = document.getElementById("uv-frame");
+	const frame = document.getElementById("uv-frame");
 	frame.style.display = "block";
-	let wispUrl = "wss://wisp-server-node-63ez.onrender.com/";
-	if (await connection.getTransport() !== "/Ultraviolet-Static/epoxy/index.mjs") {
-		await connection.setTransport("/Ultraviolet-Static/epoxy/index.mjs", [{ wisp: wispUrl }]);
-	}
+
+	// wisp-server-node conventionally exposes its WebSocket endpoint at /wisp/.
+	const wispUrl = "wss://wisp-server-node-63ez.onrender.com/wisp/";
+	await connection.setTransport("/Ultraviolet-Static/epoxy/index.mjs", [{ wisp: wispUrl }]);
+
 	frame.src = __uv$config.prefix + __uv$config.encodeUrl(url);
 });

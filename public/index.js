@@ -21,7 +21,7 @@ form.addEventListener("submit", async (event) => {
 
 	let frame = document.getElementById("uv-frame");
 	frame.style.display = "block";
-	let wispUrl = "wss://://onrender.com";
+	let wispUrl = "wss://wisp-server-node-63ez.onrender.com/";
 	if (await connection.getTransport() !== "/Ultraviolet-Static/epoxy/index.mjs") {
 		await connection.setTransport("/Ultraviolet-Static/epoxy/index.mjs", [{ wisp: wispUrl }]);
 	}

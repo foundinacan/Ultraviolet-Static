@@ -28,10 +28,11 @@ jobs:
       - name: Copy built scripts into public folder
         run: |
           mkdir -p public/uv public/baremux public/epoxy
-          cp -r node_modules/@titaniumnetwork-dev/ultraviolet/dist/* public/uv/ || true
-          cp -r node_modules/@mercuryworkshop/bare-mux/dist/* public/baremux/ || true
-          cp -r node_modules/@mercuryworkshop/epoxy-transport/dist/* public/epoxy/ || true
-          rm -f public/uv/uv.config.js
+          cp public/uv/uv.config.js /tmp/uv.config.js
+          cp -r node_modules/@titaniumnetwork-dev/ultraviolet/dist/* public/uv/
+          cp -r node_modules/@mercuryworkshop/bare-mux/dist/* public/baremux/
+          cp -r node_modules/@mercuryworkshop/epoxy-transport/dist/* public/epoxy/
+          cp /tmp/uv.config.js public/uv/uv.config.js
 
       - name: Setup Pages
         uses: actions/configure-pages@v4
